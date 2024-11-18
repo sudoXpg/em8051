@@ -1,0 +1,34 @@
+
+Eight-bit CPU with:
+    Register A (the Accumulator)                                            unsigned char
+    Register B                                                              unsigned char
+    Instruction set (opcodes???)                                            unsigned char
+
+Sixteen-bit program counter (PC) and data pointer (DPTR)                    unsigned short
+Eight-bit program status (PSW)                                              unsigned char
+Eight-bit stack pointer (SP)                                                unsigned char
+
+Internal ROM or EPROM (8751) of 0(8031) to 4K (8051)                        unsigned char[4096]
+Internal RAM of 128 bytes:                                                  unsigned char[128]
+    Four register banks, each containing eight registers                    unsigned char[32]
+    Sixteen bits, which may be addressed at the bit level:                  unsigned short
+    128 addressable bits                                                    unsigned char[128]
+    Eighty bytes of general-purpose data memory                             unsigned char[8]
+
+Thirty-two input/output pins arranged as four 8-bit ports: P0-P3            unsigned char[32]
+
+Two 16-bit timer/counters: T0 and T1                                        unsigned short[1]
+
+Full duplex serial data receiver/transmitter: SBUF                          unsigned char
+
+Control registers:                      
+    TCON                                                                    unsigned char
+    TMOD                                                                    unsigned char
+    SCON                                                                    unsigned char
+    PCON                                                                    unsigned char
+    IP                                                                      unsigned char
+    IE                                                                      unsigned char
+
+
+
+https://aeb.win.tue.nl/comp/8051/set8051.html#51inc         -- instruction set
